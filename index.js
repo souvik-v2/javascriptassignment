@@ -8,7 +8,7 @@ function calculate(operator) {
     };
     
     Object.defineProperty(obj, "reset", {
-      get : function () {this.counter = 0;}
+      get : function () {this.number = 0;}
     });
     
     Object.defineProperty(obj, "increment", {
