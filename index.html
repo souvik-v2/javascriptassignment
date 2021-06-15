@@ -18,6 +18,7 @@
     padding: 6px 0;
     width: 100%;
     margin: 10px 0;
+    text-align: center;
 }
 button {
     width: 20%;
@@ -36,7 +37,9 @@ button {
      <button type="button" name="submit" id="submit" onclick="printValue()">Submit</button>
    </form>-->
    <form method="POST">
-    Number <input type="text" name="number" id="number" value="" >
+    Number <input type="text" name="number" id="number" value="0" >
+    <button type="button" name="add" id="add" onclick="calculate('++')">++</button>
+    <button type="button" name="add" id="add" onclick="calculate('--')">--</button>
     <button type="button" name="add" id="add" onclick="calculate('+')">+</button>
     <button type="button" name="sub" id="sub" onclick="calculate('-')">-</button>
     <button type="button" name="mul" id="mul" onclick="calculate('*')">*</button>

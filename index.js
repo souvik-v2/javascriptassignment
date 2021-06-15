@@ -12,11 +12,19 @@ function calculate(operator) {
     });
     
     Object.defineProperty(obj, "increment", {
-      get : function () { document.getElementById('number').value = this.number+this.number;}
+      get : function () { document.getElementById('number').value = this.number+1;}
     });
     
     Object.defineProperty(obj, "decrement", {
       get : function () {document.getElementById('number').value =this.number-1;}
+    });
+
+    Object.defineProperty(obj, "add", {
+      get : function () {document.getElementById('number').value =this.number+this.number;}
+    });
+
+    Object.defineProperty(obj, "sub", {
+      get : function () { document.getElementById('number').value = this.number-this.number;}
     });
     
     Object.defineProperty(obj, "mul", {
@@ -28,10 +36,14 @@ function calculate(operator) {
     });
 
 
-    if(operator == '+')
+    if(operator == '++')
         obj.increment;
-    else if(operator == '-')
+        else if(operator == '--')
         obj.decrement;
+    else if(operator == '+')
+        obj.add;
+    else if(operator == '-')
+        obj.sub;
     else if(operator == '*')
         obj.mul;
     else if(operator == '/')
