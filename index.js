@@ -12,7 +12,7 @@ function calculate(operator) {
     });
     
     Object.defineProperty(obj, "increment", {
-      get : function () { document.getElementById('number').value = this.number+1;}
+      get : function () { document.getElementById('number').value = this.number+this.number;}
     });
     
     Object.defineProperty(obj, "decrement", {
